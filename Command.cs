@@ -2,8 +2,9 @@ namespace CQRS
 {
     public class Command
     {
-        string guid;
-        string userId;
+    	public string connectionId;
+        public string guid;
+        public string userId;
         public virtual void Execute() { }
     }
 }
