@@ -2,7 +2,7 @@
 
 namespace CQRS
 {
-    interface IMessageTransport
+    public interface IMessageTransport
     {
         bool IsConnected { get; }
         void Send(object msg);

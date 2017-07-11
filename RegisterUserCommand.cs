@@ -1,6 +1,6 @@
 ﻿namespace CQRS
 {
-    class RegisterUserCommand : Command
+    public class RegisterUserCommand : Command
     {
         public string deviceId;
     }

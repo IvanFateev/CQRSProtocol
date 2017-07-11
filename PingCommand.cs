@@ -1,6 +1,6 @@
 namespace CQRS
 {
-    class PingCommand : Command
+    public class PingCommand : Command
     {
     }
 }

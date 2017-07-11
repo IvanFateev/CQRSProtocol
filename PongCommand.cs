@@ -1,6 +1,6 @@
 namespace CQRS
 {
-    class PongCommand : Command
+    public class PongCommand : Command
     {
     }
 }

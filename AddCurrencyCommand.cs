@@ -1,6 +1,6 @@
 ﻿namespace CQRS
 {
-    class AddCurrencyCommand : Command
+    public class AddCurrencyCommand : Command
     {
         public string currencyId;
         public int value;

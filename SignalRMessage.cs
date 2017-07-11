@@ -1,11 +1,17 @@
 ﻿using System;
 
-namespace Assets.Scripts
+namespace CQRS
 {
     public class SignalRMessage
     {
         public string messageType;
         public string payload;
+
+        public SignalRMessage(object payload)
+        {
+            messageType = payload.GetType().FullName;
+            this.payload = Newtonsoft.Json.JsonConvert.SerializeObject(payload);
+        }
 
         public object ToObject()
         {
