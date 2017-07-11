@@ -7,12 +7,15 @@ namespace CQRS
         public string messageType;
         public string payload;
 
-        public SignalRMessage(object payload)
+        public static SignalRMessage From(object payload)
         {
-            messageType = payload.GetType().FullName;
+
             var serializedObj = Newtonsoft.Json.JsonConvert.SerializeObject(payload);
-            var plainTextBytes = System.Text.Encoding.UTF8.GetBytes(serializedObj);
-            this.payload = System.Convert.ToBase64String(plainTextBytes);
+            return new SignalRMessage
+            {
+                messageType = payload.GetType().FullName,
+                payload = serializedObj
+            };
         }
 
         public object ToObject()
@@ -31,8 +34,7 @@ namespace CQRS
             {
                 throw new Exception("Can't deserialize SignalRMessage: Type " + messageType + " not found");
             }
-            var serializedObj = System.Text.Encoding.UTF8.GetString(Convert.FromBase64String(payload));
-            return Newtonsoft.Json.JsonConvert.DeserializeObject(serializedObj, type);
+            return Newtonsoft.Json.JsonConvert.DeserializeObject(payload, type);
         }
 
     }
