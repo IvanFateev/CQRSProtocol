@@ -51,6 +51,7 @@
     <Compile Include="PingCommand.cs" />
     <Compile Include="PongCommand.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReauthenticateCommand.cs" />
     <Compile Include="RegisterUserCommand.cs" />
     <Compile Include="SignalRMessage.cs" />
   </ItemGroup>

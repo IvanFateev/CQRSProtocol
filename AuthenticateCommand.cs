@@ -2,7 +2,7 @@
 {
     public class AuthenticateCommand : Command
     {
-        public string userId;
+        public string login;
         public string password;
     }
 }
