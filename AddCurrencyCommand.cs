@@ -1,14 +1,11 @@
-﻿using System;
-using System.Threading.Tasks;
-
-namespace CQRS
+﻿namespace CQRS
 {
     public class AddCurrencyCommand : Command, IUserSaveProcessor
     {
         public string currencyId;
         public int value;
 
-        public Task Process(UserSave user)
+        public void Process(UserSave user)
         {
             if (user.currencies == null)
             {
@@ -25,8 +22,6 @@ namespace CQRS
             {
                 user.currencies[currencyId] += value;
             }
-
-            return Task.CompletedTask;
         }
     }
 }

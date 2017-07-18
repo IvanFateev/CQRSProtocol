@@ -1,9 +1,7 @@
-﻿using System.Threading.Tasks;
-
-namespace CQRS
+﻿namespace CQRS
 {
     public interface IUserSaveProcessor
     {
-        Task Process(UserSave user);
+        void Process(UserSave user);
     }
 }
