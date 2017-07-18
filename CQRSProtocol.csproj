@@ -47,13 +47,17 @@
     <Compile Include="AddCurrencyCommand.cs" />
     <Compile Include="AuthenticateCommand.cs" />
     <Compile Include="Command.cs" />
+    <Compile Include="ConfirmCommand.cs" />
     <Compile Include="IMessageTransport.cs" />
+    <Compile Include="IUserSaveProcessor.cs" />
     <Compile Include="PingCommand.cs" />
     <Compile Include="PongCommand.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ReauthenticateCommand.cs" />
     <Compile Include="RegisterUserCommand.cs" />
     <Compile Include="SignalRMessage.cs" />
+    <Compile Include="SyncUserSaveCommand.cs" />
+    <Compile Include="UserSave.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
